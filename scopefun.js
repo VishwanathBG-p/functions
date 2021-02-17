@@ -83,7 +83,7 @@ function a(x){
 }
 a(3)
 */
-
+/*
 function outside(){
     let x=5;
     function inside(x){
@@ -94,3 +94,68 @@ function outside(){
 }
 
  outside()
+ */
+
+ //closures
+/*
+ var get=function(name){
+     var getName = function(){
+         return name;
+     }
+
+    return getName()
+ }
+
+ var mypet=get('lab')
+console.log(mypet())
+*/
+/*
+var createpet = function(name){
+    var sex;
+
+    return{
+        setName:function(newName){
+            name=newName
+            
+        },
+
+        getName:function(){
+            return name;
+        },
+        getSex:function(){
+            return sex
+        },
+        setSex:function(newSex){
+            if(typeof newSex==='string'&&(newSex.toLowerCase()==='male'||newSex.toLowerCase()==='fmale')){
+                sex=newSex;
+                
+            }
+            
+        }
+    }
+}
+
+var pet=createpet('oliver')
+let a=pet.getName();
+console.log(a)
+pet.setName('lab')
+pet.setSex('male')
+let b=pet.getName();
+console.log(b)
+let c=pet.getSex();
+console.log(c)*/
+
+let pet=function(name){
+
+    return{
+        setName:function(name){
+            name=name;
+            return name
+        }
+    }
+
+}
+
+let nm=pet('lab')
+   let a= nm.setName('laboo')
+   console.log(a)
