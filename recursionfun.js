@@ -48,7 +48,7 @@ const a=function num(s){
 
 let m=[1,2,3,4,5,6,7,8]
 a(m)*/
-
+/*
 let area=function (width,height){
     if(height===0){
         
@@ -63,7 +63,8 @@ let area=function (width,height){
 }
 
 console.log(area(2 ,7))
-/*
+
+
 function sup(val1,val2)
 {
     if(val1>val2)
@@ -78,3 +79,15 @@ let c=[2,5,0,1,8,6]
     let m=c.sort
     console.log(m)
 */
+
+var N = parseInt(input),
+        num = 1;
+    
+    function factorial(N){
+        if (N > 1){
+            num = num * N;
+            factorial(N-1);
+        }
+    }
+    factorial(N);
+    console.log(num);
