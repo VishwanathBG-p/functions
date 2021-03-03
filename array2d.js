@@ -57,12 +57,12 @@ for(i=0;i<arr.length;i++){
 function diagonalSums(matrix) {
  console.log(matrix.length)
     let mainSum = 0, secondarySum = 0;
-    /*for (let row = 0; row < matrix.length; row++) {
+    for (let row = 0; row < matrix.length; row++) {
         mainSum += matrix[row][row];
         console.log(mainSum)
-        /*secondarySum += matrix[row][matrix.length - row - 1];*/
+        secondarySum += matrix[row][matrix.length - row - 1];
         
-    }*/
+    
     for(currentLine = 1 ; currentLine <= numberOfInputs ; currentLine++)
     {
         var inputs = inputAll[currentLine];
@@ -72,8 +72,8 @@ function diagonalSums(matrix) {
         sumSecondDiagonal += parseInt (inputArray [ inputArray.length - currentLine ])
 
     }
-    console.log(mainSum + ' ' + secondarySum);
-}
- 
-diagonalSums([[1, 2,3], [4, 5,6],[7,8,9]]);
+    console.log(mainSum + ' ' + secondarySum)
+    diagonalSums([[1, 2,3], [4, 5,6],[7,8,9]]);
+
+
 
